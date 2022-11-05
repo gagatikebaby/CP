@@ -1,0 +1,2 @@
+# CP
+About usual pratice
