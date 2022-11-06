@@ -1,2 +1,1 @@
-# CP
-About usual pratice
+# About usual pratice
