@@ -1,1 +1,1 @@
-# About usual pratice
+# About usual practice
