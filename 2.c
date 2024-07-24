@@ -1,19 +1,17 @@
 
-
-高良华
-DTC_DID_RoutineControl.xls
-53.5 KB
-HCM_DTC_DID1219.rar
-10.4 MB
-晚上回家把DID IO 剩下的做了
-HCM_DIDIO1220.zip
-1.5 MB
-HCM_DTC.7z
-11.9 MB
-HCM_DIDIO.7z
-1.3 MB
-x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z
-50.4 MB
+// DTC_DID_RoutineControl.xls
+// 53.5 KB
+// HCM_DTC_DID1219.rar
+// 10.4 MB
+// 晚上回家把DID IO 剩下的做了
+// HCM_DIDIO1220.zip
+// 1.5 MB
+// HCM_DTC.7z
+// 11.9 MB
+// HCM_DIDIO.7z
+// 1.3 MB
+// x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0.7z
+// 50.4 MB
 #include<stdio.h>
 #include<malloc.h>
 #define OK 1
