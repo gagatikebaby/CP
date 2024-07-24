@@ -3,7 +3,7 @@
 // 53.5 KB
 // HCM_DTC_DID1219.rar
 // 10.4 MB
-// æ™šä¸Šå›å®¶æŠŠDID IO å‰©ä¸‹çš„åšäº†
+// ÍíÉÏ»Ø¼Ò°ÑDID IO Ê£ÏÂµÄ×öÁË
 // HCM_DIDIO1220.zip
 // 1.5 MB
 // HCM_DTC.7z
@@ -23,20 +23,20 @@ typedef struct LNode
 {
 	ElemType data;
 	struct LNode *next;
-}LNode,*LinkList;//å¯¹åŒä¸€ç»“æ„ä½“æŒ‡é’ˆç±»å‹èµ·äº†ä¸¤ä¸ªåå­—,LinkListè¿™ä¸ªæŒ‡é’ˆæŒ‡å‘çš„æ˜¯ç»“æ„ä½“
+}LNode,*LinkList;//¶ÔÍ¬Ò»½á¹¹ÌåÖ¸ÕëÀàĞÍÆğÁËÁ½¸öÃû×Ö,LinkListÕâ¸öÖ¸ÕëÖ¸ÏòµÄÊÇ½á¹¹Ìå
 
-Status InitList(LinkList L)//åˆå§‹åŒ–
+Status InitList(LinkList *L)//³õÊ¼»¯
 {
-	L=(struct LNode *)malloc(sizeof(struct LNode)); 
-	L->next=NULL;
+	*L=(struct LNode *)malloc(sizeof(struct LNode)); 
+	(*L)->next=NULL;
 	return OK;
 }
 
-void CreateList(LinkList *L,int n)//åˆ›å»ºå•é“¾è¡¨
+void CreateList(LinkList *L,int n)//´´½¨µ¥Á´±í
 {	
 	int i;
 	LNode *r,*p;
-	L=(struct LNode *)malloc(sizeof(struct LNode)); 
+	*L=(struct LNode *)malloc(sizeof(struct LNode)); 
 	(*L)->data=n;
 	(*L)->next=NULL;
 
@@ -51,7 +51,7 @@ void CreateList(LinkList *L,int n)//åˆ›å»ºå•é“¾è¡¨
 
 }
 
-Status ListInsert(LinkList L,int i,ElemType e)//å•é“¾è¡¨æ’å…¥
+Status ListInsert(LinkList L,int i,ElemType e)//µ¥Á´±í²åÈë
 {
 	LNode *p;
 	LNode *s;
@@ -70,7 +70,7 @@ Status ListInsert(LinkList L,int i,ElemType e)//å•é“¾è¡¨æ’å…¥
 	return OK;
 }
 
-LNode *LocateElem(LinkList L,ElemType e)//éŒãƒ¦å£˜é¿å¶„ç¶” 
+LNode *LocateElem(LinkList L,ElemType e)//æŸ¥æ‰¾æ“ä½œ 
 {
 	LNode *p;
 	p=L->next;
@@ -82,7 +82,7 @@ LNode *LocateElem(LinkList L,ElemType e)//éŒãƒ¦å£˜é¿å¶„ç¶”
 
 	return p;
 }
-Status GetElem(LinkList L,int i,ElemType *e)//é™æ §â‚¬å…¼æ·æµ£ï¿½ 
+Status GetElem(LinkList L,int i,ElemType *e)//å–å€¼æ“ä½? 
 {
 	LNode *p;
 	p=L->next;
@@ -97,7 +97,7 @@ Status GetElem(LinkList L,int i,ElemType *e)//é™æ §â‚¬å…¼æ·æµ£ï¿½
 	return OK;
 }
 
-Status ListDelete(LinkList L,int i)//é’çŠ»æ«é¿å¶„ç¶” 
+Status ListDelete(LinkList L,int i)//åˆ é™¤æ“ä½œ 
 {
 	LNode *p,*q;
 	p=L;
@@ -118,125 +118,118 @@ void TraverseList(LinkList p)
 {
 	if(p)
 	{
-		printf("%d\n",p->data);//ç»—îƒ¿ç«´å¨†ï¿ äº¶é˜å—šç·­é‘è™¹æ®‘é„îˆšå´Ÿé–¾æã€ƒé—€å®å®³ 
+		printf("%d\n",p->data);//ç¬¬ä¸€æ¬¡éå†è¾“å‡ºçš„æ˜¯å•é“¾è¡¨é•¿åº¦ 
 		TraverseList(p->next);
 	}
 }
 
 void menu()
 {
-	printf("*************\n1,åˆå§‹åŒ–é¡ºåºè¡¨\n2,åˆ›å»ºå•é“¾è¡¨\n3,æ’å…¥\n4,ç»“æŸ\n5,æŸ¥æ‰¾\n6,åˆ é™¤\n7,å–å€¼\n8,é€’å½’è¾“å‡ºå„ä¸ªèŠ‚ç‚¹\n*************\n");
+	printf("*************\n1,³õÊ¼»¯Ë³Ğò±í\n2,´´½¨µ¥Á´±í\n3,²åÈë\n4,½áÊø\n5,²éÕÒ\n6,É¾³ı\n7,È¡Öµ\n8,µİ¹éÊä³ö¸÷¸ö½Úµã\n*************\n");
 }
 
 int main()
 {
 	menu();
-	LinkList L;//æ¾¶å­˜å¯šé–½ï¿½ 
+	LinkList L;//å¤´æŒ‡é’? 
 
 	int *z;
 	int i,k,flag=1,e,n;
 	while(flag)
 	{
-		printf("è¯·è¾“å…¥æŒ‡ä»¤\n");
+		printf("ÇëÊäÈëÖ¸Áî\n");
 		scanf("%d",&k);
 		switch(k)
 		{
 			case 1:
-				if(InitList(L)==OK)
-					printf("å†…å­˜åˆ†é…æˆåŠŸ\n");
+				if(InitList(&L)==OK)
+					printf("ÄÚ´æ·ÖÅä³É¹¦\n");
 				else
-					printf("å†…å­˜åˆ†é…å¤±è´¥\n");
+					printf("ÄÚ´æ·ÖÅäÊ§°Ü\n");
 				break;
 			case 2:
-				printf("è¾“å…¥è¦åˆ›å»ºçš„å•é“¾è¡¨çš„å…ƒç´ ä¸ªæ•°\n");
+				printf("ÊäÈëÒª´´½¨µÄµ¥Á´±íµÄÔªËØ¸öÊı\n");
 				scanf("%d",&n);
-				printf("è¯·è¾“å…¥å„ä¸ªå…ƒç´  \n");
-				CreateList(L,n);
-				printf("åˆ›å»ºçš„å•é“¾è¡¨æˆåŠŸ\n");
-				printf("ç¬¬äºŒä¸ªå…ƒç´ å€¼ï¼š%d\n",L->next->next->data);
+				printf("ÇëÊäÈë¸÷¸öÔªËØ \n");
+				CreateList(&L,n);
+				printf("´´½¨µÄµ¥Á´±í³É¹¦\n");
+				printf("µÚ¶ş¸öÔªËØÖµ£º%d\n",L->next->next->data);
 				break;
 			case 3:
-				printf("è¯·åˆ†åˆ«è€Œè¾“å…¥æ’å…¥ä½ç½®å’Œæ’å…¥çš„æ•°æ®,ä¾‹å¦‚:(2,1000)æ³¨æ„é€—å·ä¸ºè‹±æ–‡å­—ç¬¦\n\n");
+				printf("Çë·Ö±ğ¶øÊäÈë²åÈëÎ»ÖÃºÍ²åÈëµÄÊı¾İ,ÀıÈç:(2,1000)×¢Òâ¶ººÅÎªÓ¢ÎÄ×Ö·û\n\n");
 				scanf("%d,%d",&i,&e);
 				if(ListInsert(L,i,e)==OK)
-					printf("æ’å…¥æˆåŠŸ\n");
+					printf("²åÈë³É¹¦\n");
 				else
-					 printf("æ’å…¥å¤±è´¥\n");
+					 printf("²åÈëÊ§°Ü\n");
 					 break;
 			case 4:
 				flag=0;
 				break;
 			case 5: 
-				printf("è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„æ•°æ®:\n");
+				printf("ÇëÊäÈëÒª²éÕÒµÄÊı¾İ:\n");
 				scanf("%d",&e);
 				if(LocateElem(L,e)==NULL)
-					printf("æŸ¥æ‰¾å¤±è´¥\n");
+					printf("²éÕÒÊ§°Ü\n");
 				else
-					printf("æ•°æ®æ‰€åœ¨ä½ç½®ä¸º%d\n",LocateElem(L,e));
+					printf("Êı¾İËùÔÚÎ»ÖÃÎª%d\n",LocateElem(L,e));
 				break;	
 			case 6:
-				printf("æ‚¨è¦åˆ é™¤ç¬¬å‡ ä¸ªæ•°æ®:\n");
+				printf("ÄúÒªÉ¾³ıµÚ¼¸¸öÊı¾İ:\n");
 				scanf("%d",&i);
 				if(ListDelete(L,i)==OK) 
-					printf("åˆ é™¤æˆåŠŸ\n");
+					printf("É¾³ı³É¹¦\n");
 				else
-					printf("åˆ é™¤å¤±è´¥\n");
+					printf("É¾³ıÊ§°Ü\n");
 				break;
 			case 7:
 				z=&k;
-				printf("æ‚¨è¦å–ç¬¬å‡ ä¸ªæ•°æ®:\n");
+				printf("ÄúÒªÈ¡µÚ¼¸¸öÊı¾İ:\n");
 				scanf("%d",&i);
 				if(GetElem(L,i,&k)==OK)
-					printf("ç¬¬%dä¸ªæ•°æ®ä¸º:%d\n",i,k);
+					printf("µÚ%d¸öÊı¾İÎª:%d\n",i,k);
 				else
-					printf("å–å€¼å¤±è´¥\n");
+					printf("È¡ÖµÊ§°Ü\n");
 				break;
 			case 8:
 				TraverseList(L);
 				break;
 			default:
-				printf("è¾“å…¥æœ‰è¯¯\n");
+				printf("ÊäÈëÓĞÎó\n");
 				break;
 		}
 	}
 }
-#include<stdio.h>
-#include<malloc.h>
+// #include<stdio.h>
+// #include<malloc.h>
 
-typedef struct student
-{
-    int data;
-    struct student *next;
-}stu;//å»ºç«‹ä¸€ä¸ªé“¾è¡¨çš„æ•°æ®æ¨¡æ¿
+// typedef struct student
+// {
+//     int data;
+//     struct student *next;
+// }stu;//½¨Á¢Ò»¸öÁ´±íµÄÊı¾İÄ£°å
 
-int InitList(stu *L)
-{
-    L = (struct student*)malloc(sizeof(struct student));
-    L->next=NULL;
-	return 1;
-}
+// int InitList(stu *L)
+// {
+//     L = (struct student*)malloc(sizeof(struct student));
+//     L->next=NULL;
+// 	return 1;
+// }
 
-void CreatList(stu** L,int n)
-{
-    int i;
-    stu *r,*p;
-    *L = (struct student *)malloc(sizeof(struct student));
-    (*L)->data=n;
-	(*L)->next=NULL;
+// void CreatList(stu** L,int n)
+// {
+//     int i;
+//     stu *r,*p;
+//     *L = (struct student *)malloc(sizeof(struct student));
+//     (*L)->data=n;
+// 	(*L)->next=NULL;
 
-    r=*L;
-    for(i=0;i<n;++i)
-	{
-		p=(struct student *)malloc(sizeof(struct student)); 
-		scanf("%d",&(p->data));
-		p->next=NULL;r->next=p;
-		r=p;
-	} 
-}
-int main()
-{
-
-    return 0;
-}
-â€‹â€‹â€‹
-Shift + Enter æ¢è¡Œ
+//     r=*L;
+//     for(i=0;i<n;++i)
+// 	{
+// 		p=(struct student *)malloc(sizeof(struct student)); 
+// 		scanf("%d",&(p->data));
+// 		p->next=NULL;r->next=p;
+// 		r=p;
+// 	} 
+// }
