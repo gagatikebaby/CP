@@ -36,16 +36,23 @@ void CreateList(LinkList *L,int n)//创建单链表
 {	
 	int i;
 	LNode *r,*p;
-	*L=(struct LNode *)malloc(sizeof(struct LNode)); 
-	(*L)->data=n;
-	(*L)->next=NULL;
-
+	// *L=(struct LNode *)malloc(sizeof(struct LNode)); 
+	*L = NULL;
 	r=*L;
 	for(i=0;i<n;++i)
 	{
+
+		
 		p=(struct LNode *)malloc(sizeof(struct LNode)); 
 		scanf("%d",&(p->data));
+				if (*L== NULL)
+		{
+			*L = p;
+		}
+		else{
 		p->next=NULL;r->next=p;
+		}
+
 		r=p;
 	} 
 
@@ -70,7 +77,7 @@ Status ListInsert(LinkList L,int i,ElemType e)//单链表插入
 	return OK;
 }
 
-LNode *LocateElem(LinkList L,ElemType e)//鏌ユ壘鎿嶄綔 
+LNode *LocateElem(LinkList L,ElemType e)//查找数据 
 {
 	LNode *p;
 	p=L->next;
