@@ -10,7 +10,7 @@ namespace UIDesign.utils
 {
     public class DBManger
     {
-        private string _path = "D:\\WPF\\UIDesign\\Database";
+        private string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database");
         //private string 
         //string folderPath = Path.GetDirectoryName(_databaseFilePath);
         public void InitializeDatabase()

@@ -1,0 +1,163 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\view\\dbmanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:view\\dbmanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\viewmodel\\dbmanagervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:viewmodel\\dbmanagervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\view\\dbmanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:view\\dbmanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\utils\\dbmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:utils\\dbmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\utils\\dboperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:utils\\dboperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DBManagerVM.cs",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\VIewModel\\DBManagerVM.cs",
+              "RelativeDocumentMoniker": "VIewModel\\DBManagerVM.cs",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\VIewModel\\DBManagerVM.cs",
+              "RelativeToolTip": "VIewModel\\DBManagerVM.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T08:22:24.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBManagerPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\View\\DBManagerPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\DBManagerPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\View\\DBManagerPage.xaml.cs",
+              "RelativeToolTip": "View\\DBManagerPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T07:56:45.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DBManagerPage.xaml",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\View\\DBManagerPage.xaml",
+              "RelativeDocumentMoniker": "View\\DBManagerPage.xaml",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\View\\DBManagerPage.xaml",
+              "RelativeToolTip": "View\\DBManagerPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-09T07:49:49.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-09T07:42:19.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DBManger.cs",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\utils\\DBManger.cs",
+              "RelativeDocumentMoniker": "utils\\DBManger.cs",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\utils\\DBManger.cs",
+              "RelativeToolTip": "utils\\DBManger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T07:37:50.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DBOperation.cs",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\utils\\DBOperation.cs",
+              "RelativeDocumentMoniker": "utils\\DBOperation.cs",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\utils\\DBOperation.cs",
+              "RelativeToolTip": "utils\\DBOperation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T07:37:28.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T07:37:21.596Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 2387,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

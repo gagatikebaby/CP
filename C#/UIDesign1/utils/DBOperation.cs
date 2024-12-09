@@ -13,7 +13,7 @@ namespace UIDesign.utils
         
         public static void InsertUser(string username, string password)
         {
-            string _path = "D:\\WPF\\UIDesign\\Database";
+            string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database");
             string _databaseFilePath = Path.Combine(_path, "myDB.db");
             using (var connection = new SQLiteConnection($"Data Source={_databaseFilePath};Version=3;"))
             {

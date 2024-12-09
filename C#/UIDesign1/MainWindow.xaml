@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:UIDesign"
         mc:Ignorable="d"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:Views ="namespace:UIDesign.View"
         Title="MainWindow"
         Height="800" 
         Width="1200"
@@ -23,14 +24,21 @@
             Title="{Binding ViewModel.ApplicationTitle}"
             Grid.Row="0"
             CloseWindowByDoubleClickOnIcon="True">
-            <ui:TitleBar.Icon>
+            <!--<ui:TitleBar.Icon>
                 <ui:ImageIcon Source="D:\WPF\UIDesign\Assets\wpfui.png" />
-            </ui:TitleBar.Icon>
+            </ui:TitleBar.Icon>-->
         </ui:TitleBar>
 
         <ui:NavigationView Background="Black" IsBackButtonVisible="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem Content="Home" Icon="Home24"/>
+                <ui:NavigationViewItem
+        Content="Dashboard"
+        NavigationCacheMode="Enabled"
+        TargetPageType="{x:Type Views:DBManagerPage}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="Home24" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
             </ui:NavigationView.MenuItems>
         </ui:NavigationView>
     </Grid>
