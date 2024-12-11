@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UIDesign"
         mc:Ignorable="d"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-        xmlns:Views ="namespace:UIDesign.View"
+        xmlns:Views ="clr-namespace:UIDesign.View"
         Title="MainWindow"
         Height="800" 
         Width="1200"
@@ -32,7 +32,7 @@
         <ui:NavigationView Background="Black" IsBackButtonVisible="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem
-        Content="Dashboard"
+        Content="数据库管理"
         NavigationCacheMode="Enabled"
         TargetPageType="{x:Type Views:DBManagerPage}">
                     <ui:NavigationViewItem.Icon>

@@ -35,8 +35,8 @@ namespace UIDesign.utils
                     string createTableQuery = @"
             CREATE TABLE IF NOT EXISTS Users (
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                Username TEXT NOT NULL,
-                Password TEXT NOT NULL
+                Number TEXT NOT NULL,
+                Price TEXT NOT NULL
             );";
 
                     using (var command = new SQLiteCommand(createTableQuery, connection))

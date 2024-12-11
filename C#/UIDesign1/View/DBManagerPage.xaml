@@ -10,7 +10,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -18,14 +18,24 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
-            <Label Content="数量："/>
-            <ui:TextBlock x:Name="TB_Number" Text="{Binding Number}" Width="100"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ui:TextBlock Text="数量：" Height="auto" Width="80" FontWeight="Bold" FontSize="25" />
+            <ui:TextBox x:Name="TB_Number" Text="{Binding Number}"
+                        Width="140" Height="50" Margin="0 -10 0 0" 
+                        FontSize="20"/>
+            <ui:TextBlock Text="个" Height="auto" Width="80" FontWeight="Bold" FontSize="25" Margin="10 0 0 0" />
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
-            <Label Content="单价："/>
-            <ui:TextBlock x:Name="TB_Price" Text="{Binding Price}" Width="100"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Row="1">
+            <ui:TextBlock Text="单价：" Height="auto" Width="80" FontWeight="Bold" FontSize="25"  />
+            <ui:TextBox x:Name="TB_Price" Text="{Binding Price}" 
+                        Height="50" Width="140"  Margin="0 -10 0 0"
+                        FontSize="20"/>
+            <ui:TextBlock Text="元" Height="auto" Width="80" FontWeight="Bold" FontSize="25" Margin="10 0 0 0" />
         </StackPanel>
+
+        <ui:Button x:Name="Btn_save" Content="保存" FontSize="25" 
+                   Grid.Row="2" Grid.Column="1" Height="60" Width="120"   
+                   VerticalAlignment="Center"  HorizontalAlignment="Center" FontWeight="Bold" Command="{Binding SaveCommand}" />
     </Grid>
 </UserControl>

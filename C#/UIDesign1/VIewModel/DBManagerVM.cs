@@ -1,10 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Input;
+using UIDesign.utils;
 using Wpf.Ui;
 
 namespace UIDesign.VIewModel
@@ -15,7 +12,26 @@ namespace UIDesign.VIewModel
         public DBManagerVM(INavigationService navigationService)
         {
             _navigationService = navigationService;
+            InitCommands();
         }
+
+        private void InitCommands()
+        {
+            SaveCommand = new RelayCommand(SaveCommandExecute);
+        }
+
+
+
+        public ICommand SaveCommand { get; protected set; }
+
+        private void SaveCommandExecute()
+        {
+            DBOperation.InsertUser(Number.ToString(), Price.ToString());
+        }
+
+
+
+
 
         private int number;
         public int Number
