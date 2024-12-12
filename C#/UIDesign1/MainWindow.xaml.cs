@@ -11,7 +11,6 @@ namespace UIDesign
         public MainWindow()
         {
             InitializeComponent(); // 必须调用此方法来初始化XAML定义的UI组件
-            //DBOperation.InsertUser("admin", "admin");
         }
 
         private void FluentWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

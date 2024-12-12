@@ -2,30 +2,36 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
+using UIDesign.Model;
 
 namespace UIDesign.utils
 {
     public class DBOperation
     {
         
-        public static void InsertUser(string number, string price)
+        public bool AddRecord(int number, double price)
         {
-            string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database");
-            string _databaseFilePath = Path.Combine(_path, "myDB.db");
-            using (var connection = new SQLiteConnection($"Data Source={_databaseFilePath};Version=3;"))
+            DBModel record = new DBModel
             {
-                connection.Open();
+                DbInstanceUID = Guid.NewGuid().ToString(),
+                Number = Convert.ToInt32(number),
+                Price = Convert.ToInt32(price)
+            };
 
-                string insertQuery = "INSERT INTO Users (Number, Price) VALUES (@Number, @Price);";
+            return InsertReportRecord(record);
+        }
 
-                using (var command = new SQLiteCommand(insertQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@Number", number);
-                    command.Parameters.AddWithValue("@Price", price);
 
-                    command.ExecuteNonQuery();
-                    Console.WriteLine("User inserted.");
-                }
+        private bool InsertReportRecord(DBModel record)
+        {
+            int count = DBManger.Instance.Insert<DBModel>(record);
+            if (count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

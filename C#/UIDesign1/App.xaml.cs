@@ -1,7 +1,9 @@
-﻿using System.Configuration;
+﻿//using Level1.Squirrel;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Windows;
+using UIDesign.Helper;
 using UIDesign.utils;
 
 namespace UIDesign
@@ -16,8 +18,7 @@ namespace UIDesign
             base.OnStartup(e);
 
             // 初始化数据库
-            DBManger dbInitializer = new DBManger();
-            dbInitializer.InitializeDatabase();
+            SQLiteHelper.InitializeDatabase();
         }
     }
 

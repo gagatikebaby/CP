@@ -1,12 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System.ComponentModel.DataAnnotations;
 namespace UIDesign.Model
 {
-    class DBModel
+    public class DBModel : ObservableObject
     {
+        private string dbInstanceUID;
+        private int number;
+        private double price;
+
+        /// <summary>
+        /// 主键
+        /// </summary>
+        [Key]
+        [MaxLength(255)]
+        public string DbInstanceUID
+        {
+            get => dbInstanceUID;
+            set => SetProperty(ref dbInstanceUID, value);
+        }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        [MaxLength(255)]
+        public int Number
+        {
+            get => number;
+            set => SetProperty(ref number, value); // 使用 SetProperty 方法来更新属性并触发通知
+        }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [MaxLength(255)]
+        public double Price
+        {
+            get => price;
+            set => SetProperty(ref price, value);
+        }
     }
 }

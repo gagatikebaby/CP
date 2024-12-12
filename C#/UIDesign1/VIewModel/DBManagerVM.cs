@@ -9,9 +9,11 @@ namespace UIDesign.VIewModel
     public partial class DBManagerVM : ObservableObject
     {
         private readonly INavigationService _navigationService;
+        private DBOperation dBOperation;
         public DBManagerVM(INavigationService navigationService)
         {
             _navigationService = navigationService;
+            dBOperation = new DBOperation();
             InitCommands();
         }
 
@@ -26,7 +28,7 @@ namespace UIDesign.VIewModel
 
         private void SaveCommandExecute()
         {
-            DBOperation.InsertUser(Number.ToString(), Price.ToString());
+            dBOperation.AddRecord(Number, Price);
         }
 
 
