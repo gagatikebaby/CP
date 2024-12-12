@@ -31,11 +31,11 @@
       "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|c:\\users\\kuanteng\\desktop\\python\\cp\\cp\\c#\\uidesign1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C670DB5-2F59-4C7E-8FA7-5BD63A968F5F}|UIDesign.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,11 +46,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -66,10 +70,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "App.xaml.cs",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T01:53:07.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T01:53:07.206Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T07:42:19.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:42:19.09Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "VIewModel\\DBManagerVM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T08:22:24.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T08:22:24.758Z"
             },
             {
               "$type": "Document",
@@ -117,8 +114,7 @@
               "RelativeToolTip": "View\\DBManagerPage.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:56:45.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:56:45.486Z"
             },
             {
               "$type": "Document",
@@ -129,8 +125,7 @@
               "ToolTip": "C:\\Users\\kuanteng\\Desktop\\Python\\CP\\CP\\C#\\UIDesign1\\View\\DBManagerPage.xaml",
               "RelativeToolTip": "View\\DBManagerPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T07:49:49.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:49:49.131Z"
             },
             {
               "$type": "Document",
@@ -142,8 +137,7 @@
               "RelativeToolTip": "utils\\DBManger.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:37:50.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:37:50.038Z"
             },
             {
               "$type": "Document",
@@ -155,8 +149,7 @@
               "RelativeToolTip": "utils\\DBOperation.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:37:28.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:37:28.863Z"
             },
             {
               "$type": "Document",
@@ -168,8 +161,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:37:21.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T07:37:21.596Z"
             }
           ]
         },
