@@ -14,7 +14,7 @@
         WindowBackdropType="Mica"
         WindowCornerPreference="Round"
         WindowStartupLocation="CenterScreen"
-        Topmost="True"
+        Topmost="False"
         ExtendsContentIntoTitleBar="True"
         MouseLeftButtonDown="FluentWindow_MouseLeftButtonDown">
 

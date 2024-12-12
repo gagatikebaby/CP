@@ -1,54 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.Data.Entity;
+//using System.Data.Common;
+//using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UIDesign.Model;
 using SQLite.CodeFirst;
+using Microsoft.EntityFrameworkCore;
 
 namespace UIDesign.utils
 {
+
     public class DBContext : DbContext
     {
-        static DBContext()
+        public DBContext(DbContextOptions<DBContext> options) : base(options) { }
+
+        // 添加 DbSet 对象
+        public DbSet<DBModel> DBModels { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            // 可选的：配置模型映射
+            modelBuilder.Entity<DBModel>()
+                        .ToTable("DBModels"); // 配置表名为 DBModels
+            modelBuilder.Entity<DBModel>()
+                .HasKey(e => e.DbInstanceUID); // 指定 Id 作为主键
+            base.OnModelCreating(modelBuilder);
         }
-        static string mySqlConnection = SqlConnection.connectionString;
-        /// <summary>
-        /// 构造方法
-        /// </summary>
-        public DBContext() : base(mySqlConnection)
-        {
-
-        }
-
-        /// <summary>
-        /// 构造方法
-        /// </summary>
-        /// <param name="con"></param>
-        public DBContext(DbConnection con) : base(con, true)
-        {
-
-        }
-
-
-        /// <summary>
-        /// 数据集
-        /// </summary>
-        public DbSet<DBModel> DBModelSet { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="modelBuilder"></param>
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            //base.OnModelCreating(modelBuilder);
-            Database.SetInitializer(new SqliteCreateDatabaseIfNotExists<DBContext>(modelBuilder));
-        }
-
     }
+
+
 }
+
