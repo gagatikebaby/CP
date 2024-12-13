@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
+//using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
 using UIDesign.Helper;
 
@@ -37,12 +39,12 @@ namespace UIDesign.utils
                 using (var connection = SQLiteHelper.GetDbConnection())
                 {
                     // 配置 Entity Framework Core 使用 SQLite
-                    var options = new DbContextOptionsBuilder<DBContext>()
+                    var options = new DbContextOptionsBuilder<Glh_DBContext>()
                         .UseSqlite(connection) // Use SQLite with the given connection
                         .Options;
 
                     // 使用 DBContext 执行数据库操作
-                    using (var context = new DBContext(options))
+                    using (var context = new Glh_DBContext(options))
                     {
                         context.Set<T>().Add(model);
                         success = context.SaveChanges();
@@ -54,39 +56,34 @@ namespace UIDesign.utils
         }
 
         /// <summary>
-        /// 插入多行
+        /// 查询（条件传空返回结果目标表的所有记录）
         /// </summary>
         /// <typeparam name="T">模型类型</typeparam>
-        /// <param name="models">模型实例集合</param>
-        /// <returns>影响行数</returns>
-        //public int Insert<T>(IReadOnlyCollection<T> models)
-        //    where T : class, new()
-        //{
-        //    int success = 0;
-        //    try
-        //    {
-        //        if (models.Count > 0)
-        //        {
-        //            lock (_lock)
-        //            {
-        //                using (var context = SQLiteHelper.GetDbConnection())
-        //                {
-        //                    context.Set<T>().AddRange(models);
-        //                    success = context.SaveChanges();
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //HomeLog.Instance.Error($"Error in Insert method: {ex.Message}");
-        //    }
-        //    return success;
-        //}
+        /// <param name="exp">表达式</param>
+        /// <returns>返回影响记录</returns>
+        public IEnumerable<T> Select<T>(Expression<Func<T, bool>> exp = null)
+            where T : class, new()
+        {
+            return Filter(exp);
+        }
+
+        /// <summary>
+        /// 内部查询使用方法
+        /// </summary>
+        /// <typeparam name="T">模型类型</typeparam>
+        /// <param name="exp">查询表达式</param>
+        /// <returns>返回IQueryable类型</returns>
+        private IQueryable<T> Filter<T>(Expression<Func<T, bool>> exp = null)
+            where T : class, new()
+        {
+            var context = SQLiteHelper.GetDbContext();
+            var query = context.Set<T>().AsNoTracking();
+            return exp != null ? query.Where(exp) : query;
+        }
 
 
     }
-    
+
 
 }
 

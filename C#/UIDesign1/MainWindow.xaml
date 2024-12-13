@@ -39,6 +39,17 @@
                         <ui:SymbolIcon Symbol="Home24" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+
+                <ui:NavigationViewItem
+Content="列表"
+NavigationCacheMode="Enabled"
+TargetPageType="{x:Type Views:DBListPage}">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:SymbolIcon Symbol="List16" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+
             </ui:NavigationView.MenuItems>
         </ui:NavigationView>
     </Grid>

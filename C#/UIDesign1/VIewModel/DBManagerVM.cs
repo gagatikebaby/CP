@@ -9,11 +9,9 @@ namespace UIDesign.VIewModel
     public partial class DBManagerVM : ObservableObject
     {
         private readonly INavigationService _navigationService;
-        private DBOperation dBOperation;
         public DBManagerVM(INavigationService navigationService)
         {
             _navigationService = navigationService;
-            dBOperation = new DBOperation();
             InitCommands();
         }
 
@@ -28,12 +26,8 @@ namespace UIDesign.VIewModel
 
         private void SaveCommandExecute()
         {
-            dBOperation.AddRecord(Number, Price);
+            DBOperation.Instance.AddRecord(Number, Price);
         }
-
-
-
-
 
         private int number;
         public int Number

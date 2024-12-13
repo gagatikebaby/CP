@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace UIDesign.Model
 {
     public class DBModel : ObservableObject
@@ -8,7 +9,8 @@ namespace UIDesign.Model
         private string dbInstanceUID;
         private int number;
         private double price;
-
+        private DateTime time;
+        private int index;
         /// <summary>
         /// 主键
         /// </summary>
@@ -38,6 +40,23 @@ namespace UIDesign.Model
         {
             get => price;
             set => SetProperty(ref price, value);
+        }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [MaxLength(255)]
+        public DateTime Time
+        {
+            get => time;
+            set => SetProperty(ref time, value);
+        }
+
+        [NotMapped]
+        public int Index
+        {
+            get => index;
+            set => SetProperty(ref index, value);
         }
     }
 }

@@ -12,9 +12,9 @@ using Microsoft.EntityFrameworkCore;
 namespace UIDesign.utils
 {
 
-    public class DBContext : DbContext
+    public class Glh_DBContext : DbContext
     {
-        public DBContext(DbContextOptions<DBContext> options) : base(options) { }
+        public Glh_DBContext(DbContextOptions<Glh_DBContext> options) : base(options) { }
 
         // 添加 DbSet 对象
         public DbSet<DBModel> DBModels { get; set; }

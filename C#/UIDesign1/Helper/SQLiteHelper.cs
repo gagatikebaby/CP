@@ -1,9 +1,8 @@
 ﻿using System.Data.Common;
 using Microsoft.Data.Sqlite;
-//using System.Data.SQLite.EF6;
 using System.IO;
-//using SQLiteConnection = System.Data.SQLite.SQLiteConnection;
-//using System.Data.SQLite;
+using Microsoft.EntityFrameworkCore;
+using UIDesign.utils;
 namespace UIDesign.Helper
 {
     /// <summary>
@@ -33,10 +32,10 @@ namespace UIDesign.Helper
 
                     string createTableQuery = @"
             CREATE TABLE IF NOT EXISTS DBModels (
-                Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 DbInstanceUID TEXT NOT NULL,
                 Number TEXT NOT NULL,
-                Price TEXT NOT NULL
+                Price TEXT NOT NULL,
+                Time TEXT NOT NULL
             );";
 
                     using (var command = connection.CreateCommand())
@@ -76,5 +75,15 @@ namespace UIDesign.Helper
                 Directory.CreateDirectory(_path);
             }
         }
+
+        public static Glh_DBContext GetDbContext()
+        {
+            var options = new DbContextOptionsBuilder<Glh_DBContext>()
+                .UseSqlite($"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database", "myDB.db")}")
+                .Options;
+
+            return new Glh_DBContext(options);
+        }
+
     }
 }
