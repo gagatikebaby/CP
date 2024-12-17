@@ -1,4 +1,5 @@
 ﻿//using Level1.Squirrel;
+using Microsoft.Windows.Themes;
 using System.Configuration;
 using System.Data;
 using System.Data.Entity;
@@ -19,6 +20,8 @@ namespace UIDesign
 
             // 初始化数据库
             SQLiteHelper.InitializeDatabase();
+
+         
         }
     }
 

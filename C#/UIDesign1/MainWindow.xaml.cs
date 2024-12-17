@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Microsoft.Windows.Themes;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
@@ -17,6 +18,7 @@ namespace UIDesign
             InitializeComponent(); // 必须调用此方法来初始化XAML定义的UI组件
             LoadICON();
             Loaded += (_, _) => RootNavigation.Navigate(typeof(DBManagerPage));
+           
         }
 
         private void FluentWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
