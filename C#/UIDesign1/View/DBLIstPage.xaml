@@ -26,22 +26,33 @@
 
         <ui:ListView Grid.Column="1" Grid.Row="1" Width="500" Height=" 500"  ItemsSource="{Binding ReportInfo.RecordInfoList}"
                      SelectedItem="{Binding ReportInfo.SelectedRecordInfo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="序号" DisplayMemberBinding="{Binding Index}" Width="80"/>
-                    <GridViewColumn Header="数量" DisplayMemberBinding="{Binding Number}" Width="100"/>
-                    <GridViewColumn Header="单价" DisplayMemberBinding="{Binding Price}" Width="100"/>
-                    <GridViewColumn Header="时间" Width="150">
+            <ui:ListView.ContextMenu>
+                <ContextMenu>
+                    <ui:MenuItem Header="删除" Command="{Binding DeleteListItemCmd}"/>
+                </ContextMenu>
+            </ui:ListView.ContextMenu>
+            <ui:ListView.View>
+                <ui:GridView>
+                    <ui:GridViewColumn Header="序号" DisplayMemberBinding="{Binding Index}" Width="80"/>
+                    <ui:GridViewColumn Header="时间" Width="150">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Time, Converter={StaticResource DateTimeConvert}}" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                        
-                </GridView>
-            </ListView.View>
+                    </ui:GridViewColumn>
+                    <ui:GridViewColumn Header="支出" DisplayMemberBinding="{Binding Number}" Width="100"/>
+                    <ui:GridViewColumn Header="收入" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                </ui:GridView>
+            </ui:ListView.View>
         </ui:ListView>
-        
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2">
+            <ui:TextBlock Text="合计支出：" FontSize="25"/>
+            <ui:TextBlock Text="{Binding TotalExpenses}" MinWidth="100"  FontSize="25"/>
+
+            <ui:TextBlock Text="合计收入："  FontSize="25"/>
+            <ui:TextBlock Text="{Binding TotalIncome}" MinWidth="100"  FontSize="25"/>
+        </StackPanel>
     </Grid>
 </UserControl>

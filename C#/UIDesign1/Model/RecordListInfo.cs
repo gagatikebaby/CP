@@ -16,7 +16,7 @@ namespace UIDesign.Model
             InitData();
         }
 
-        private void InitData()
+        public void InitData()
         {
             GetHistoryInfoList(DBOperation.Instance.GetRecords());
         }

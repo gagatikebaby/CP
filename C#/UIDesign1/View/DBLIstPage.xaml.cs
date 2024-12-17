@@ -14,6 +14,12 @@ namespace UIDesign.View
             ViewModel = new VIewModel.DBListVM(navigationService: null);
             InitializeComponent();
             DataContext = ViewModel;
+            this.Loaded += DBListPage_Loaded;
+        }
+
+        private void DBListPage_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            ViewModel.RefreshList();
         }
 
         public DBListPage(VIewModel.DBListVM viewModel)

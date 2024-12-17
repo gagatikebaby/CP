@@ -38,6 +38,20 @@ namespace UIDesign.utils
             return DBManger.Instance.Select<DBModel>().ToList();
         }
 
+        /// <summary>
+        /// 删除一条记录
+        /// </summary>
+        /// <param name="uid"></param>
+        /// <returns></returns>
+        public bool DeleteRecord(string uid)
+        {
+            DBModel record = new DBModel
+            {
+                DbInstanceUID = uid
+            };
+            return DBManger.Instance.Delete<DBModel>(record) > 0;
+        }
+
         private bool InsertReportRecord(DBModel record)
         {
             int count = DBManger.Instance.Insert<DBModel>(record);

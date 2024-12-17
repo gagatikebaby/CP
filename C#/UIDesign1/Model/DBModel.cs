@@ -7,7 +7,7 @@ namespace UIDesign.Model
     public class DBModel : ObservableObject
     {
         private string dbInstanceUID;
-        private int number;
+        private double number;
         private double price;
         private DateTime time;
         private int index;
@@ -26,7 +26,7 @@ namespace UIDesign.Model
         /// 数量
         /// </summary>
         [MaxLength(255)]
-        public int Number
+        public double Number
         {
             get => number;
             set => SetProperty(ref number, value); // 使用 SetProperty 方法来更新属性并触发通知

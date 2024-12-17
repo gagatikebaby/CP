@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         xmlns:Views ="clr-namespace:UIDesign.View"
-        Title="MainWindow"
+        Title="lz记账本"
         Height="800" 
         Width="1200"
         ResizeMode="CanResize"
@@ -21,18 +21,22 @@
     <Grid>
         <ui:TitleBar
             x:Name="TitleBar"
-            Title="{Binding ViewModel.ApplicationTitle}"
+            Title="LZ记账本"
+            FontSize="18"
             Grid.Row="0"
             CloseWindowByDoubleClickOnIcon="True">
-            <!--<ui:TitleBar.Icon>
-                <ui:ImageIcon Source="D:\WPF\UIDesign\Assets\wpfui.png" />
-            </ui:TitleBar.Icon>-->
+            <ui:TitleBar.Icon>
+                <!--<ui:ImageIcon  x:Name="Icon_1" Source="pack://application:,,,/UIDesign1;component/Assets/wpfui.png" />-->
+                <ui:ImageIcon  x:Name="Icon_1" />
+            </ui:TitleBar.Icon>
         </ui:TitleBar>
 
-        <ui:NavigationView Background="Black" IsBackButtonVisible="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <ui:NavigationView x:Name="RootNavigation" Background="Black" 
+                           IsBackButtonVisible="Auto" 
+                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem
-        Content="数据库管理"
+        Content="记账"
         NavigationCacheMode="Enabled"
         TargetPageType="{x:Type Views:DBManagerPage}">
                     <ui:NavigationViewItem.Icon>
@@ -41,7 +45,7 @@
                 </ui:NavigationViewItem>
 
                 <ui:NavigationViewItem
-Content="列表"
+Content="总览"
 NavigationCacheMode="Enabled"
 TargetPageType="{x:Type Views:DBListPage}">
                     <ui:NavigationViewItem.Icon>

@@ -81,6 +81,39 @@ namespace UIDesign.utils
             return exp != null ? query.Where(exp) : query;
         }
 
+        /// <summary>
+        /// 删除一行
+        /// </summary>
+        /// <typeparam name="T">模型类型</typeparam>
+        /// <param name="entity">实体类</param>
+        /// <returns>影响行数</returns>
+        public int Delete<T>(T model) where T : class, new()
+
+        {
+            int success = 0;
+
+            // 确保线程安全
+            lock (_lock)
+            {
+                // 获取 SQLite 连接
+                using (var connection = SQLiteHelper.GetDbConnection())
+                {
+                    // 配置 Entity Framework Core 使用 SQLite
+                    var options = new DbContextOptionsBuilder<Glh_DBContext>()
+                        .UseSqlite(connection) // Use SQLite with the given connection
+                        .Options;
+
+                    // 使用 DBContext 执行数据库操作
+                    using (var context = new Glh_DBContext(options))
+                    {
+                        context.Set<T>().Remove(model);
+                        success = context.SaveChanges();
+                    }
+                }
+            }
+
+            return success;
+        }
 
     }
 
