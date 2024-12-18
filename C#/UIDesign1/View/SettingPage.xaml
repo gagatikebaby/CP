@@ -6,8 +6,6 @@
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:local="clr-namespace:UIDesign.View"
       xmlns:cvt="clr-namespace:UIDesign.Converts"
-          d:DataContext="{d:DesignInstance local:SettingPage,
-                                     IsDesignTimeCreatable=False}"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
      >
@@ -40,7 +38,6 @@
          Grid.Column="1"
          MinWidth="200"
          x:Name="Cmb_ThemeChange"
-         FocusableChanged="ComboBox_FocusableChanged"
          SelectedIndex="{Binding ViewModel.CurrentApplicationTheme, Converter={StaticResource themeConvert}, Mode=TwoWay}">
                 <ComboBoxItem Content="Light" />
                 <ComboBoxItem Content="Dark" />

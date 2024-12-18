@@ -53,6 +53,9 @@ TargetPageType="{x:Type Views:DBListPage}">
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
+            </ui:NavigationView.MenuItems>
+
+            <ui:NavigationView.FooterMenuItems>
                 <ui:NavigationViewItem
 Content="设置"
 NavigationCacheMode="Enabled"
@@ -61,8 +64,8 @@ TargetPageType="{x:Type Views:SettingPage}">
                         <ui:SymbolIcon Symbol="Settings16" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
+            </ui:NavigationView.FooterMenuItems>
 
-            </ui:NavigationView.MenuItems>
         </ui:NavigationView>
     </Grid>
 </ui:FluentWindow>

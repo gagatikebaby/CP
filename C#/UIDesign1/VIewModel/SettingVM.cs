@@ -42,9 +42,9 @@ namespace UIDesign.VIewModel
             }
         }
 
-        //public void OnCurrentApplicationThemeChanged(ApplicationTheme oldValue, ApplicationTheme newValue)
-        //{
-        //    ApplicationThemeManager.Apply(newValue);
-        //}
+        partial void OnCurrentApplicationThemeChanged(ApplicationTheme oldValue, ApplicationTheme newValue)
+        {
+            ApplicationThemeManager.Apply(newValue);
+        }
     }
 }
