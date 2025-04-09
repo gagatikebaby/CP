@@ -1,11 +1,24 @@
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 li a {
     color: green; 
+    font-size: 30px; 
 }
 
 li a:hover {
+    
     color: darkgreen;
 }
 
+h1 {
+    font-size: 36px; /* 调整标题大小 */
+}
+
 body {
-    background: white url("images/background.png") no-repeat;
+    background: white url("images/background.png") no-repeat center center;
+    background-size: cover;
 }
